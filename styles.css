@@ -1,0 +1,786 @@
+/* ================================
+   공통 스타일
+   ================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Pretendard Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: #3c3c3c;
+    background-color: #fff;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ================================
+   헤더
+   ================================ */
+.Header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 64px;
+    background-color: #fff;
+    border-bottom: 1px solid #f0f0f0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.Header-logo {
+    width: 160px;
+    height: auto;
+}
+
+.Header-logo img {
+    width: 100%;
+    height: auto;
+}
+
+.Header-MainMenu {
+    display: flex;
+    gap: 64px;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.Header-MainMenu-item {
+    font-size: 16px;
+    font-weight: 600;
+    color: #3c3c3c;
+    transition: color 0.3s ease;
+}
+
+.Header-MainMenu-item:hover {
+    color: #b8860b;
+}
+
+.Header-LoginMenu {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.Header-LoginMenu-item {
+    font-size: 14px;
+    font-weight: 600;
+    color: #3c3c3c;
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+}
+
+.Header-LoginMenu-item:hover {
+    opacity: 1;
+}
+
+/* ================================
+   배너
+   ================================ */
+.Banner {
+    position: relative;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 64px;
+}
+
+.Banner-BannerPhoto {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.Banner-Link {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 44.44%;
+    overflow: hidden;
+}
+
+.Banner-Image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Banner-Overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(60, 60, 60, 0.2);
+}
+
+.Banner-indicators {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 0;
+    margin-top: -20px;
+}
+
+.Banner-circle {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    border: 1px solid white;
+    background-color: white;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.Banner-slide {
+    width: 33px;
+    height: 11px;
+    border-radius: 15px;
+    border: 1px solid white;
+    background-color: white;
+    cursor: pointer;
+}
+
+.Banner-circle:hover {
+    opacity: 1;
+}
+
+/* ================================
+   New Menu
+   ================================ */
+.NewMenu {
+    position: relative;
+    padding: 80px 64px;
+    background-color: #fff;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.NewMenu-title {
+    font-size: 48px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #3c3c3c;
+}
+
+.NewMenu-pinkbear {
+    position: absolute;
+    width: 171px;
+    height: 234px;
+    top: -155px;
+    right: 100px;
+    opacity: 0.8;
+}
+
+.NewMenu-container {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    overflow: hidden;
+}
+
+.NewMenu-button {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 48px;
+    background-color: white;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.NewMenu-button:hover {
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.16);
+}
+
+.NewMenu-icon {
+    width: 9.16px;
+    height: 16px;
+    color: #3c3c3c;
+}
+
+.NewMenu-items {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    flex: 1;
+    padding-bottom: 10px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.NewMenu-items::-webkit-scrollbar {
+    height: 4px;
+}
+
+.NewMenu-items::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 4px;
+}
+
+.NewMenu-items::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 4px;
+}
+
+.NewMenu-items::-webkit-scrollbar-thumb:hover {
+    background: #bbb;
+}
+
+.NewMenu-Link {
+    flex-shrink: 0;
+    width: 340px;
+    background-color: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0px 0px 24px rgba(230, 223, 199, 0.24);
+    transition: all 0.3s ease;
+}
+
+.NewMenu-Link:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 8px 32px rgba(230, 223, 199, 0.32);
+}
+
+.NewMenu-Image {
+    width: 100%;
+    height: 340px;
+    overflow: hidden;
+}
+
+.NewMenu-Image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.NewMenu-Background {
+    width: 100%;
+    padding: 24px;
+    background-color: white;
+    height: 108.8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.NewMenu-productName {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    color: #212121;
+    line-height: 1.1;
+}
+
+/* ================================
+   Best Menu
+   ================================ */
+.BestMenu {
+    position: relative;
+    padding: 80px 64px;
+    background-color: #fafafa;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.BestMenu-title {
+    font-size: 48px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #3c3c3c;
+}
+
+.BestMenu-container {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    overflow: hidden;
+}
+
+.BestMenu-button {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 48px;
+    background-color: white;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.BestMenu-button:hover {
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.16);
+}
+
+.BestMenu-icon {
+    width: 9.16px;
+    height: 16px;
+    color: #3c3c3c;
+}
+
+.BestMenu-items {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    flex: 1;
+    padding-bottom: 10px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.BestMenu-items::-webkit-scrollbar {
+    height: 4px;
+}
+
+.BestMenu-items::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 4px;
+}
+
+.BestMenu-items::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 4px;
+}
+
+.BestMenu-items::-webkit-scrollbar-thumb:hover {
+    background: #bbb;
+}
+
+.BestMenu-Link {
+    flex-shrink: 0;
+    width: 340px;
+    background-color: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0px 0px 24px rgba(230, 223, 199, 0.24);
+    transition: all 0.3s ease;
+}
+
+.BestMenu-Link:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 8px 32px rgba(230, 223, 199, 0.32);
+}
+
+.BestMenu-Image {
+    width: 100%;
+    height: 340px;
+    overflow: hidden;
+}
+
+.BestMenu-Image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.BestMenu-Background {
+    width: 100%;
+    padding: 24px;
+    background-color: white;
+    height: 108.8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.BestMenu-productName {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    color: #212121;
+    line-height: 1.1;
+}
+
+/* ================================
+   푸터
+   ================================ */
+.Footer {
+    background-color: #f9f7f3;
+    padding: 60px 64px 40px;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.Footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.Footer-info,
+.Footer-social,
+.Footer-help {
+    flex: 1;
+    min-width: 250px;
+}
+
+.Footer-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #3c3c3c;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.Footer-list {
+    list-style: none;
+}
+
+.Footer-list li {
+    font-size: 14px;
+    color: #666;
+    line-height: 2;
+}
+
+.Footer-list a {
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.Footer-list a:hover {
+    color: #3c3c3c;
+}
+
+.Footer-copyright {
+    border-top: 1px solid #e0dbd0;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.Footer-copyright a {
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.Footer-copyright a:hover {
+    color: #3c3c3c;
+}
+
+.divider {
+    color: #ddd;
+}
+
+/* ================================
+   반응형 디자인 (Flexbox 기반)
+   ================================ */
+@media (max-width: 1200px) {
+    .Header {
+        padding: 24px 40px;
+    }
+    
+    .Header-MainMenu {
+        gap: 40px;
+    }
+    
+    .NewMenu,
+    .BestMenu,
+    .Banner,
+    .Footer {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    
+    .NewMenu-title,
+    .BestMenu-title {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .Footer-content {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .Header {
+        padding: 16px 24px;
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .Header-logo {
+        width: 120px;
+    }
+    
+    .Header-MainMenu {
+        gap: 20px;
+        font-size: 14px;
+        order: 3;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    
+    .Header-LoginMenu {
+        gap: 20px;
+        font-size: 12px;
+    }
+    
+    .Banner {
+        padding: 0 24px;
+    }
+    
+    .Banner-indicators {
+        gap: 8px;
+        padding: 16px 0;
+    }
+    
+    .Banner-circle,
+    .Banner-slide {
+        width: 8px;
+        height: 8px;
+    }
+    
+    .Banner-slide {
+        width: 20px;
+    }
+    
+    .NewMenu,
+    .BestMenu {
+        padding: 40px 24px;
+    }
+    
+    .NewMenu-title,
+    .BestMenu-title {
+        font-size: 32px;
+        margin-bottom: 24px;
+    }
+    
+    .NewMenu-pinkbear {
+        width: 120px;
+        height: 160px;
+        right: 20px;
+        top: -100px;
+    }
+    
+    .NewMenu-container,
+    .BestMenu-container {
+        gap: 12px;
+    }
+    
+    .NewMenu-button,
+    .BestMenu-button {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .NewMenu-Link,
+    .BestMenu-Link {
+        width: 280px;
+        min-width: 280px;
+    }
+    
+    .NewMenu-Image,
+    .BestMenu-Image {
+        height: 280px;
+    }
+    
+    .NewMenu-productName,
+    .BestMenu-productName {
+        font-size: 18px;
+    }
+    
+    .Footer {
+        padding: 40px 24px 20px;
+    }
+    
+    .Footer-content {
+        flex-direction: column;
+        gap: 32px;
+    }
+    
+    .Footer-copyright {
+        font-size: 12px;
+        gap: 8px;
+        padding-top: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Header {
+        padding: 12px 16px;
+    }
+    
+    .Header-logo {
+        width: 100px;
+    }
+    
+    .Header-MainMenu {
+        font-size: 12px;
+        gap: 12px;
+    }
+    
+    .Header-LoginMenu {
+        font-size: 11px;
+        gap: 12px;
+    }
+    
+    .Banner {
+        padding: 0 16px;
+    }
+    
+    .NewMenu,
+    .BestMenu {
+        padding: 32px 16px;
+    }
+    
+    .NewMenu-title,
+    .BestMenu-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .NewMenu-Link,
+    .BestMenu-Link {
+        width: 240px;
+        min-width: 240px;
+    }
+    
+    .NewMenu-Image,
+    .BestMenu-Image {
+        height: 240px;
+    }
+    
+    .NewMenu-productName,
+    .BestMenu-productName {
+        font-size: 16px;
+    }
+    
+    .Footer {
+        padding: 32px 16px 16px;
+    }
+    
+    .Footer-title {
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+    
+    .Footer-list li {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+}
+
+/* ================================
+   애니메이션
+   ================================ */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.NewMenu-Link,
+.BestMenu-Link {
+    animation: slideIn 0.5s ease-out;
+}
+
+/* ================================
+   유틸리티 클래스
+   ================================ */
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 64px;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.gap-1 { gap: 8px; }
+.gap-2 { gap: 16px; }
+.gap-3 { gap: 24px; }
+.gap-4 { gap: 32px; }
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.mt-0 { margin-top: 0; }
+.mt-1 { margin-top: 8px; }
+.mt-2 { margin-top: 16px; }
+.mt-3 { margin-top: 24px; }
+.mt-4 { margin-top: 32px; }
+
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: 8px; }
+.mb-2 { margin-bottom: 16px; }
+.mb-3 { margin-bottom: 24px; }
+.mb-4 { margin-bottom: 32px; }
+
+.p-1 { padding: 8px; }
+.p-2 { padding: 16px; }
+.p-3 { padding: 24px; }
+.p-4 { padding: 32px; }
